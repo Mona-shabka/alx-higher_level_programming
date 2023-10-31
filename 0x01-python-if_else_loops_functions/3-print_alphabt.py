@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 for n in range(ord('a'), ord('z') + 1):
-	if n != ord('q') and n != ord('e'):
-		print("{:c}".format(n), end="")
+    if n != ord('q') and n != ord('e'):
+        print("{:c}".format(n), end="")
