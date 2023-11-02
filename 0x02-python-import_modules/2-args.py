@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
+
     counts = len(sys.argv) - 1
     if counts == 0:
         print("0 arguments.")
