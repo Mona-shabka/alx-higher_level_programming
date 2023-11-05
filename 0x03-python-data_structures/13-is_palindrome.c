@@ -14,17 +14,17 @@ int is_palindrome(listint_t **head)
 }
 
 /**
- * aux_palind - a function that checks palindrome.
+ * auxx_palind - a function that checks palindrome.
  * @head: list head.
  * @end: list end.
  * Return: nothing.
  */
 
-int aux_palind(listint_t **head, listint_t *end)
+int auxx_palind(listint_t **head, listint_t *end)
 {
 	if (end == NULL)
 		return (1);
-	if (aux_palind(head, end->next) && (*head)->n == end->n)
+	if (auxx_palind(head, end->next) && (*head)->n == end->n)
 	{
 		*head = (*head)->next;
 		return (1);
