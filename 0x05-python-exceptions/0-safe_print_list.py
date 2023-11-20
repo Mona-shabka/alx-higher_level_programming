@@ -4,7 +4,7 @@ def safe_print_list(my_list=[], x=0):
         try:
             while m is not x:
                 print(f"{my_list[m]}", end="")
-                m  += 1
+                m += 1
     except IndexError:
         break
     print()
