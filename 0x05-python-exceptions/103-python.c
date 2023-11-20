@@ -42,31 +42,29 @@ void print_python_list(PyObject *p)
 }
 
 /**
- * print_python_bytes - Prints basic info about Python byte objects.
- * @p: A PyObject byte object.
+ * print_python_bytes - A function to prints information about Python byte.
+ * @p: Address PyObject byte.
+ * Return: void.
  */
+
 void print_python_bytes(PyObject *p)
 {
 	Py_ssize_t size, i;
 	PyBytesObject *bytes = (PyBytesObject *)p;
 
 	fflush(stdout);
-
 	printf("[.] bytes object info\n");
 	if (strcmp(p->ob_type->tp_name, "bytes") != 0)
 	{
 		printf("  [ERROR] Invalid Bytes Object\n");
 		return;
 	}
-
 	printf("  size: %ld\n", ((PyVarObject *)p)->ob_size);
 	printf("  trying string: %s\n", bytes->ob_sval);
-
 	if (((PyVarObject *)p)->ob_size >= 10)
 		size = 10;
 	else
 		size = ((PyVarObject *)p)->ob_size + 1;
-
 	printf("  first %ld bytes: ", size);
 	for (i = 0; i < size; i++)
 	{
@@ -81,6 +79,7 @@ void print_python_bytes(PyObject *p)
 /**
  * print_python_float - A function that prints info about Python float.
  * @p: Address of PyObject float.
+ * Return: void.
  */
 
 void print_python_float(PyObject *p)
